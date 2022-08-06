@@ -4,22 +4,51 @@
     <meta charset="utf-8" />
     <title>MySite</title>
     <style>
+
+
         h1, h2 {
             color: blue;
         }
 
-        #container {
-            display: flex;
-            flex-wrap: wrap;
+        @media (max-device-width : 480px) {
+            /* Styles Smartfon*/
+            #container {
+                display: grid;
+                flex-wrap: wrap;
+                background-color: blue;
+            }
+
+
+
+                #container > div {
+                    background-color: springgreen;
+                    font-size: 20px;
+                    margin: 20px;
+                    padding: 20px;
+                    width: 200px;
+                }
+
         }
 
-            #container > div {
-                background-color: springgreen;
-                font-size: 20px;
-                margin: 20px;
-                padding: 20px;
-                width: 200px;
+        @media (min-device-width : 481px) {
+            /* Styles Comp */
+
+            #container {
+                display: flex;
+                flex-wrap: wrap;
+                background-color: blue;
             }
+
+
+
+                #container > div {
+                    background-color: springgreen;
+                    font-size: 20px;
+                    margin: 20px;
+                    padding: 20px;
+                    width: 200px;
+                }
+        }
     </style>
 </head>
 <body>
